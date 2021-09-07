@@ -195,7 +195,7 @@ class Parser
         if (!$match)
             return $domString;
 
-        $content    = trim($contentMatch[0] ?? '');
+        $content    = $contentMatch[0] ?? '';
         if (empty($content)) {
             $domString  = substr($domString, strpos($domString, $contentMatch[0]) + strlen($contentMatch[0]));
             return $domString;
